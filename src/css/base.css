@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'DNFBitBitOTF' ;
+  src: url(../fonts/DNFBitBitOTF.otf);
+}
+
+@font-face {
+  font-family: 'Silkscreen' ;
+  src: url(../fonts/Silkscreen-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'RobotoMono' ;
+  src: url(../fonts/RobotoMono-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: 'D2Coding' ;
+  src: url(../fonts/D2Coding-Ver1.3.2-20180524.ttf);
+}
+
+:root{
+  --font-kor: 'DNFBitBitOTF';
+  --font-pixel: 'Silkscreen';
+  --font-robo: 'RobotoMono';
+  --font-D2: 'D2Coding';
+
+  --color-black:#000000;
+  --color-white:#FFFFFF;
+  --color-lightblack:#1E1E1E;
+  --color-lightblue:#8892B0;
+
+  --color-sig:#64FFDA;
+  --color-darksig:#4FBBA2;
+
+  --vs-y:#FFD70E;
+  --vs-b:#7BDCF0;
+  --vs-r:#CE723B;
+  --vs-m:#CBAB4C;
+
+  --cont-back:#0F111D;
+  --port-back:#D2C0AA;
+  --port-font:#2C1B2D;
+}
+
+body{
+  background-color: var(--color-lightblack);
+  font-family: var(--font-pixel);
+}
+
+.hidden{
+  display:none;
+}
+
+.flex{
+  display: flex;
+}
+
+.flex_center{
+  justify-content: center;
+  align-items: center;
+}

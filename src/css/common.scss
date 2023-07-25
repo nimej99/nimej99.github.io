@@ -1,0 +1,432 @@
+@charset "utf-8";
+
+$tablet: 1319px;
+$desktop: 1320px;
+$m_header: 615px;
+$s_header: 495px;
+$ss_header: 355px;
+$sss_header: 326px;
+$article:1650px;
+
+@mixin tablet{
+  @media (max-width: $tablet){
+    @content;
+  }
+}
+@mixin desktop{
+  @media (min-width: $desktop){
+    @content;
+  }
+}
+@mixin article{
+  @media (max-width: $article){
+    @content;
+  }
+}
+@mixin m_header{
+  @media (max-width: $m_header){
+    @content;
+  }
+}
+@mixin s_header{
+  @media (max-width: $s_header){
+    @content;
+  }
+}
+@mixin ss_header{
+  @media (max-width: $ss_header){
+    @content;
+  }
+}
+@mixin sss_header{
+  @media (max-width: $sss_header){
+    @content;
+  }
+}
+
+$inter_avg:20px;
+$inter_min:10px;
+
+// 인트로 None 서식
+.none{
+  max-width:395px;
+  width:100%;
+  height:100%;
+  box-sizing: border-box;
+  justify-content: center;
+  flex-direction: column;
+  margin:0 auto;
+  animation: flicker 3s infinite;
+  li{
+    font-size: 2.5rem;
+    @include article{
+      font-size: 2rem;
+      line-height: 32px;
+    }
+    line-height: 40px;
+    margin:15px 20px;
+  }
+  li:first-child{
+    color:var(--vs-y);
+  span{
+    color:var(--vs-m);
+  }
+  }
+  li:nth-child(2){
+    font-size: 2.25rem;
+    @include article{
+      font-size: 1.75rem;
+    }
+    text-indent: 20px;
+    text-align: end;
+    letter-spacing: 2px;
+    color:var(--vs-b);
+    span{
+      color:var(--color-white);
+    }
+    strong{
+      color:var(--vs-r);
+    }
+  }
+  li:last-child{
+    color:var(--vs-m);
+  }
+}
+
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+
+  4% {
+    opacity: 0.9;
+  }
+
+  6% {
+    opacity: 0.85;
+  }
+
+  8% {
+    opacity: 0.95;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  11% {
+    opacity: 0.922;
+  }
+
+  12% {
+    opacity: 0.9;
+  }
+
+  14% {
+    opacity: 0.95;
+  }
+
+  16% {
+    opacity: 0.98;
+  }
+
+  17% {
+    opacity: 0.9;
+  }
+
+  19% {
+    opacity: 0.93;
+  }
+
+  20% {
+    opacity: 0.99;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: 0.94;
+  }
+
+  28% {
+    opacity: 0.98;
+  }
+
+  37% {
+    opacity: 0.93;
+  }
+
+  38% {
+    opacity: 0.5;
+  }
+
+  39% {
+    opacity: 0.96;
+  }
+
+  42% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: 0.97;
+  }
+
+  46% {
+    opacity: 0.94;
+  }
+
+  56% {
+    opacity: 0.9;
+  }
+
+  58% {
+    opacity: 0.9;
+  }
+
+  60% {
+    opacity: 0.99;
+  }
+
+  68% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.9;
+  }
+
+  72% {
+    opacity: 0.95;
+  }
+
+  93% {
+    opacity: 0.93;
+  }
+
+  95% {
+    opacity: 0.95;
+  }
+
+  97% {
+    opacity: 0.93;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.gnb_y > a{
+  margin-top:10px;
+  display: block;
+  box-sizing: border-box;
+  color:var(--vs-y);
+  font-size: 2.5rem;
+  @include article{
+    font-size: 2.25rem;
+  }
+  line-height: 50px;
+  text-align: center;
+}
+.depth_1{
+  max-width:395px;
+  flex-direction: column;
+  margin:20px auto;
+  text-align: center;
+  li{
+    margin:15px 0px;
+    font-size:2rem;
+    @include article{
+      font-size: 1.75rem;
+      line-height: 32px;
+    }
+    line-height: 40px;
+    a{
+      color:var(--vs-b);
+    }
+    a.active{
+      color:var(--vs-r);
+    }
+  }
+  li:active{
+    transform: translate(2px, 1px);
+  }
+}
+
+//내비게이션 보드영역 서식
+.b_text{
+  max-height:214px;
+  height:100%;
+  padding:50px 30px;
+  box-sizing: border-box;
+  li{
+    font-family: var(--font-D2);
+    font-size: 1rem;
+    color:var(--color-white);
+  }
+  li:nth-child(2){
+    color:var(--color-lightblue);
+    margin:25px 0px;
+    font-size: 1.75rem;
+    @include article{
+      font-size: 1.5rem;
+    }
+  }
+}
+.word.empty {
+  visibility: hidden;
+}
+
+.b_icons{
+  max-height:70px;
+  height:100%;
+  padding:0px 30px;
+  align-items: center;
+  box-sizing: border-box;
+  gap:5px;
+  li{
+    text-align: left;
+    width:10%;
+    span{
+      cursor: pointer;
+      img{
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+  li:last-child{
+    text-align:end;
+    width: 70%;
+  }
+}
+
+.s_logo{
+  padding:20px;
+  @include s_header{
+    padding:20px 10px;
+  }
+}
+.name{
+  font-size: 1.5rem;
+  margin-left:20px;
+  @include m_header{
+    margin-left:10px;
+    font-size: 1.25rem;
+  }
+  @include s_header{
+    display: none;
+  }
+  line-height: 90px;
+  color:var(--vs-y);
+}
+.s_gnb{
+  width:100%;
+  justify-content: center;
+  li{
+    margin:0 20px;
+    @include m_header{
+      margin:0 10px;
+    }
+    // @include s_header{
+    //   margin:0 5px;
+    // }
+    a{
+      line-height: 90px;
+      font-size: 1.125rem;
+      @include m_header{
+        font-size: 0.875rem;
+      }
+      @include ss_header{
+        font-size: 0.75rem;
+      }
+      @include sss_header{
+        font-size: 0.625rem;
+      }
+      color:var(--vs-b);
+    }
+    a.active{
+      color:var(--vs-r);
+    }
+  }
+  li:active{
+    transform: translate(2px, 1px);
+  }
+}
+
+header{
+  display: none;
+  height:90px;
+  background-color: var(--color-black);
+  border:1px solid var(--color-sig);
+  border-radius: 20px;
+  box-sizing: border-box;
+  margin:10px 10px 0px;
+  @include tablet{
+    display: flex;
+  }
+}
+
+h2{
+  color:var(--color-white);
+  font-size: 2rem;
+  padding:50px;
+  text-decoration: underline;
+  @include tablet{
+    font-size: 1.75rem;
+    padding:30px;
+  }
+  @include m_header(){
+    font-size: 1.5rem;
+    padding:20px;
+  }
+  @include s_header(){
+    font-size: 1.25rem;
+  }
+}
+
+article{
+  height:calc(100vh - 40px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  @include tablet{
+    height:calc(100vh - 120px);
+  }
+  border-radius: 20px;
+  background-color: var(--cont-back);
+}
+article::-webkit-scrollbar {
+  width: 1px;  /* 스크롤바의 너비 */
+}
+article::-webkit-scrollbar-thumb {
+  height: 30%; /* 스크롤바의 길이 */
+  background: var(--color-white); /* 스크롤바의 색상 */
+  border-radius: 10px;
+}
+article::-webkit-scrollbar-track {
+  background: none;  /*스크롤바 뒷 배경 색상*/
+}
+
+// 버튼 공통서식
+.btn{
+  padding:0px;
+  width:150px;
+  height:40px;
+  font-family: var(--font-robo);
+  font-size: 1rem;
+  box-shadow: 0 0 1px var(--color-sig) inset;
+  border-radius: $inter_min;
+  background-color: var(--color-darksig);
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.btn:hover{
+  color:var(--color-white);
+}
+.btn:active{
+  transform: translate(2px, 1px);
+  color:#fff;
+}

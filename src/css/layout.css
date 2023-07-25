@@ -1,0 +1,118 @@
+@charset "UTF-8";
+body {
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+}
+@media (max-width: 1319px) {
+  main {
+    margin: 10px;
+    flex-direction: column;
+  }
+}
+
+.nav {
+  flex-direction: column;
+  margin: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  max-width: 600px;
+  min-width: 400px;
+  width: 25%;
+  background-color: var(--color-darksig);
+  border: 1px var(--color-sig) inset;
+  border-radius: 20px;
+  height: calc(100vh - 40px);
+  overflow-y: scroll;
+}
+@media (max-width: 1319px) {
+  .nav {
+    display: none;
+  }
+}
+
+nav::-webkit-scrollbar {
+  width: 1px; /* 스크롤바의 너비 */
+}
+
+nav::-webkit-scrollbar-thumb {
+  height: 30%; /* 스크롤바의 길이 */
+  background: var(--color-white); /* 스크롤바의 색상 */
+  border-radius: 10px;
+}
+
+nav::-webkit-scrollbar-track {
+  background: none; /*스크롤바 뒷 배경 색상*/
+}
+
+.logo {
+  background-color: var(--color-black);
+  border-radius: 20px;
+  max-width: 580px;
+  padding: 10px 0px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.logo img {
+  vertical-align: top;
+}
+
+.gnb {
+  background-color: var(--color-black);
+  border-radius: 20px;
+  margin-top: 10px;
+  height: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.game {
+  width: 100%;
+  max-height: 200px;
+  justify-content: space-around;
+}
+.game li {
+  max-width: 200px;
+  width: 45%;
+  max-height: 200px;
+  padding-bottom: 45%;
+  transition: 0.5s;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.board {
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 580px;
+  min-height: 320px;
+  background-color: var(--color-lightblack);
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+.board p {
+  font-family: var(--font-robo);
+  font-size: 0.75rem;
+  text-align: center;
+  color: var(--color-lightblue);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.cont {
+  overflow: hidden;
+  max-width: 2560px;
+  width: 75%;
+  margin: 20px 20px 20px 0px;
+  box-sizing: border-box;
+  border: 1px solid var(--color-sig);
+  border-radius: 20px;
+}
+@media (max-width: 1319px) {
+  .cont {
+    width: 100%;
+    margin: 0px;
+  }
+}/*# sourceMappingURL=layout.css.map */
